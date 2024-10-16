@@ -23,8 +23,8 @@ function App() {
   //React 에서는 state 라는것을 사용한다
   //이 state 가 바뀔때마다 리액트가 알아서 화면을 새로 렌더링 해준다.
 
-  const [myNum, setMyNum] = useState(1);
-  const [otherNum, setOtherNum] = useState(1);
+  // const [myNum, setMyNum] = useState(1);
+  // const [otherNum, setOtherNum] = useState(1);
   // 기록을 관리하는 state는 안만들었어 그래서 만들자 .. 이것들은 기록에 들어갈 state를 관리할 것들이다
 
   const [gameHistory, setGameHistory] = useState([]);

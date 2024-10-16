@@ -1,6 +1,6 @@
 [build]
-  publish = "portfolio/build"
-  command = "CI=false npm run build"
+  command = "cd portfolio && CI=false npm run build"
+  publish = "portfolio/build"  
 
 [[redirects]]
   from = "/*"
