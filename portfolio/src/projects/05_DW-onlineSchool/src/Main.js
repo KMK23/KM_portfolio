@@ -12,24 +12,22 @@ import QuestionPage from "./pages/QuestionPage";
 
 function Main(props) {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<HomePage />} />
-          <Route path="courses">
-            <Route index element={<CourseListPage />} />
-            <Route path=":courseSlug" element={<CoursePage />} />
-          </Route>
-          <Route path="questions">
-            <Route index element={<QuestionListPage />} />
-            <Route path=":questionId" element={<QuestionPage />} />
-          </Route>
-          <Route path="login" element={<Login />} />
-          <Route path="logout" element={<Logout />} />
-          <Route path="wishlist" element={<WishListPage />} />
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<HomePage />} />
+        <Route path="courses">
+          <Route index element={<CourseListPage />} />
+          <Route path=":courseSlug" element={<CoursePage />} />
         </Route>
-      </Routes>
-    </BrowserRouter>
+        <Route path="questions">
+          <Route index element={<QuestionListPage />} />
+          <Route path=":questionId" element={<QuestionPage />} />
+        </Route>
+        <Route path="login" element={<Login />} />
+        <Route path="logout" element={<Logout />} />
+        <Route path="wishlist" element={<WishListPage />} />
+      </Route>
+    </Routes>
   );
 }
 

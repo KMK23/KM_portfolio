@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { getApp, getApps, initializeApp } from "firebase/app";
 import {
   getFirestore,
   collection,
@@ -35,7 +35,7 @@ const firebaseConfig = {
   measurementId: "G-TXE5QEQFKS",
 };
 
-const app = initializeApp(firebaseConfig);
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const db = getFirestore(app);
 
 function getCollection(collectionName) {

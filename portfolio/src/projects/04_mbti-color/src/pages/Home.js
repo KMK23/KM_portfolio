@@ -90,7 +90,7 @@ function Home(props) {
           </h1>
           <div>
             <div className={styles.filter}>
-              <img className={styles.removeIcon} src="/images/x.svg" />
+              <img className={styles.removeIcon} src="/images/testimg.jpg" />
             </div>
           </div>
         </header>

@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps, getApp } from "firebase/app";
 import {
   getFirestore,
   collection,
@@ -23,7 +23,7 @@ const firebaseConfig = {
   appId: "1:575450297390:web:71fdabff39be0960fe5bbf",
 };
 
-const app = initializeApp(firebaseConfig);
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const db = getFirestore(app);
 
 async function getAllDatas(collectionName, order, lq) {
