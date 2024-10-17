@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./New.module.css";
+import styles from "./New.module.scss";
 import { generatePath, Link } from "react-router-dom";
 import MBTISelect from "../components/MBTISelect";
 import ColorInput from "../components/ColorInput";
@@ -48,25 +48,31 @@ function New(props) {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.headerHeading}>새 컬러 등록하기</h1>
-        <Link className={styles.cancel} to="/">
-          <img src="/images/x.svg" className={styles.cancelIcon} />
+    <div className={styles.mbtiColorContainer}>
+      <header className={styles.mbtiColorHeader}>
+        <h1 className={styles.mbtiColorHeaderHeading}>새 컬러 등록하기</h1>
+        <Link className={styles.mbtiColorCancel} to="/">
+          <img src="/images/x.svg" className={styles.mbtiColorCancelIcon} />
         </Link>
       </header>
-      <section className={styles.section}>
-        <h4 className={styles.sectionHeading}>MBTI</h4>
+      <section className={styles.mbtiColorSection}>
+        <h4 className={styles.mbtiColorSectionHeading}>MBTI</h4>
         <MBTISelect
           MBTIValue={formValue.mbti}
           handleChange={(newMbti) => handleChange("mbti", newMbti)}
         />
       </section>
-      <section className={styles.section}>
-        <h2 className={styles.sectionHeading}>
+      <section className={styles.mbtiColorSection}>
+        <h2 className={styles.mbtiColorSectionHeading}>
           컬러
-          <button className={styles.random} onClick={handleRandomClick}>
-            <img className={styles.repeatIcon} src="/images/repeat.svg" />
+          <button
+            className={styles.mbtiColorRandom}
+            onClick={handleRandomClick}
+          >
+            <img
+              className={styles.mbtiColorRepeatIcon}
+              src="/images/repeat.svg"
+            />
           </button>
         </h2>
         <ColorInput
@@ -77,7 +83,7 @@ function New(props) {
         />
       </section>
       <button
-        className={styles.submit}
+        className={styles.mbtiColorSubmit}
         onClick={handleSave}
         disabled={isSubmit}
       >

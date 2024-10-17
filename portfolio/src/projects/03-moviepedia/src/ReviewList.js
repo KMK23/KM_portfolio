@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Rating from "./Rating";
-import "./ReviewList.css";
+import styles from "./ReviewList.module.scss"; // 모듈 CSS를 가져옵니다.
 import ReviewForm from "./ReviewForm";
 import useTranslate from "./hooks/useTranslate";
 
@@ -19,22 +19,31 @@ function ReviewListItem({ item, handleDelete, handleEdit }) {
   };
   const t = useTranslate();
   return (
-    <div className="ReviewListItem">
-      <img className="ReviewListItem-img" alt="" src={item.imgUrl} />
-      <div className="ReviewListItem-rows">
-        <h1 className="ReviewListItem-title">{item.title}</h1>
-        <Rating className="ReviewListItem-rating" hoverRating={item.rating} />
-        <p className="ReviewListItem-date">{formatDate(item.createdAt)}</p>
-        <p className="ReviewListItem-content">{item.content}</p>
-        <div className="ReviewListItem-buttons">
+    <div className={styles.moviePediaReviewListItem}>
+      <img
+        className={styles.moviePediaReviewListItemImg}
+        alt=""
+        src={item.imgUrl}
+      />
+      <div className={styles.moviePediaReviewListItemRows}>
+        <h1 className={styles.moviePediaReviewListItemTitle}>{item.title}</h1>
+        <Rating
+          className={styles.moviePediaReviewListItemRating}
+          hoverRating={item.rating}
+        />
+        <p className={styles.moviePediaReviewListItemDate}>
+          {formatDate(item.createdAt)}
+        </p>
+        <p className={styles.moviePediaReviewListItemContent}>{item.content}</p>
+        <div className={styles.moviePediaReviewListItemButtons}>
           <button
-            className="ReviewListItem-edit-button"
+            className={styles.moviePediaReviewListItemEditButton}
             onClick={handleEditClick}
           >
             {t("edit button")}
           </button>
           <button
-            className="ReviewListItem-delete-button"
+            className={styles.moviePediaReviewListItemDeleteButton}
             onClick={handleDeleteClick}
           >
             {t("delete button")}
@@ -49,7 +58,7 @@ function ReviewList({ items, handleDelete, onUpdate, onUpdateSuccess }) {
   const [editingId, setEditingId] = useState(null);
 
   return (
-    <ul className="ReviewList">
+    <ul className={styles.moviePediaReviewList}>
       {items.map((item) => {
         if (item.id === editingId) {
           const { title, rating, content, imgUrl, docId } = item;

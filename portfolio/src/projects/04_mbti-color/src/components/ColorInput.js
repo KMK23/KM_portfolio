@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./ColorInput.module.css";
+import styles from "./ColorInput.module.scss";
 
 function ColorInput({ colorCodeValue, handleChange }) {
   const onChange = (e) => {
@@ -21,16 +21,16 @@ function ColorInput({ colorCodeValue, handleChange }) {
     }
   };
   return (
-    <div className={styles.colorInputContainer}>
+    <div className={styles.mbtiColorInputContainer}>
       <input
-        className={styles.colorInput}
+        className={styles.mbtiColorInput}
         value={colorCodeValue}
         maxLength={7}
         onChange={onChange}
         onBlur={handleBlur}
       />
       <span
-        className={styles.colorInputChip}
+        className={styles.mbtiColorInputChip}
         style={{ backgroundColor: colorCodeValue }}
       ></span>
     </div>

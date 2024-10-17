@@ -1,0 +1,32 @@
+.HandButton {
+  width: 166px;
+  height: 166px;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  background-image: url("./assets/purple.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  // HandButtonIcon 클래스의 스타일
+  & .HandButtonIcon {
+    // 변경: HandButtonIcon을 자식으로 선택
+    opacity: 0.45;
+    width: 55px;
+    height: 55px;
+  }
+
+  // hover 상태에서의 스타일
+  &:hover {
+    // 변경: &:hover로 hover 상태 선택
+    background-image: url("./assets/yellow.svg");
+
+    & .HandButtonIcon {
+      // 변경: 자식 클래스 선택
+      opacity: 1;
+    }
+  }
+}

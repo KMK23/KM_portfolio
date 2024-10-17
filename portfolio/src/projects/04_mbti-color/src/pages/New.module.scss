@@ -1,21 +1,25 @@
-.container {
+.mbtiColorContainer {
   width: 416px;
   margin: 40px auto;
 }
-.section {
+
+.mbtiColorSection {
   margin: 40px 0;
 }
-.header {
+
+.mbtiColorHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.headerHeading {
+
+.mbtiColorHeaderHeading {
   margin: 0;
   font-weight: 800;
   font-size: 40px;
 }
-.cancel {
+
+.mbtiColorCancel {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,27 +27,31 @@
   padding: 18px;
   border-radius: 50%;
 }
-.cancel:hover {
+
+.mbtiColorCancel:hover {
   background-color: #edf0f5;
 }
-.sectionHeading {
+
+.mbtiColorSectionHeading {
   font-weight: 500;
   font-size: 24px;
   margin: 24px 0;
 }
-.random {
+
+.mbtiColorRandom {
   background-color: #f4f7fb;
   border-radius: 8px;
   margin-left: 8px;
   border: none;
   padding: 8px;
 }
-.random:hover {
+
+.mbtiColorRandom:hover {
   background-color: #edf0f5;
   cursor: pointer;
 }
 
-.submit {
+.mbtiColorSubmit {
   cursor: pointer;
   width: 100%;
   background-color: #464e5e;

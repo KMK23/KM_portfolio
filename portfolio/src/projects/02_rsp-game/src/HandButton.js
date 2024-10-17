@@ -1,13 +1,13 @@
 import HandIcon from "./HandIcon";
-import "./HandButton.css";
+import styles from "./HandButton.module.scss";
 
 function HandButton({ value, onClick }) {
   const handleClick = () => {
     onClick(value);
   };
   return (
-    <button className="HandButton" onClick={handleClick}>
-      <HandIcon value={value} className="HandButton-icon" />
+    <button className={styles.HandButton} onClick={handleClick}>
+      <HandIcon value={value} className={styles.HandButtonIcon} />
     </button>
   );
 }

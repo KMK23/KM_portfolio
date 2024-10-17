@@ -1,11 +1,12 @@
-.App {
+.moviePediaApp {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.App input,
-.App textarea {
+
+.moviePediaApp input,
+.moviePediaApp textarea {
   background-color: #f9f9f9;
   padding: 15px 20px;
   border: 1px solid #f9f9f9;
@@ -14,20 +15,24 @@
   font-size: 16px;
   font-family: sans-serif;
 }
-.App input::placeholder,
-.App textarea::placeholder {
+
+.moviePediaApp input::placeholder,
+.moviePediaApp textarea::placeholder {
   color: #dbdbdb;
 }
-.App input:focus,
-.App textarea:focus {
+
+.moviePediaApp input:focus,
+.moviePediaApp textarea:focus {
   border: 1px solid #d1d1d1;
 }
-.App-sorts {
+
+.moviePediaApp-sorts {
   margin: 51px 0 23px;
   display: flex;
   gap: 16px;
 }
-.AppSortButton {
+
+.moviePediaAppSortButton {
   padding: 12px 40px;
   border: none;
   color: #000;
@@ -35,42 +40,51 @@
   font-size: 18px;
   background-color: transparent;
 }
-.AppSortButton:not(.selected) {
+
+.moviePediaAppSortButton:not(.selected) {
   cursor: pointer;
 }
-.AppSortButton.selected {
+
+.moviePediaAppSortButton.selected {
   border-radius: 10px;
   color: #fff;
   background-color: #000;
 }
-.App .App-nav,
-.App .App-footer {
+
+.moviePediaApp .moviePediaApp-nav,
+.moviePediaApp .moviePediaApp-footer {
   flex: none;
 }
-.App .App-container {
+
+.moviePediaApp .moviePediaApp-container {
   flex: 1 1;
 }
-.App-nav {
+
+.moviePediaApp-nav {
   height: 65px;
   background-color: #fff;
   border-bottom: 1px solid #e2e2e2;
 }
-.App-nav-container,
-.App-container,
-.App-footer-container {
+
+.moviePediaApp-nav-container,
+.moviePediaApp-container,
+.moviePediaApp-footer-container {
   width: 100%;
   max-width: 860px;
   margin: auto;
 }
-.App-nav-container {
+
+.moviePediaApp-nav-container {
   display: flex;
   height: 100%;
   align-items: center;
 }
-.App-container {
+
+.moviePediaApp-container {
   padding: 50px 21px;
 }
-.App-ReviewForm {
+
+.moviePediaApp-ReviewForm {
   padding: 30px;
   background-image: url("./assets/ticket.png");
   background-repeat: no-repeat;
@@ -78,16 +92,16 @@
   background-size: cover;
   border-radius: 5px;
   filter: drop-shadow(0 0 11px rgba(105, 105, 105, 0.2));
-  /* box-shadow: 0 0 11px rgba(105, 105, 105, 0.2); */
 }
 
-.App-ReviewList {
+.moviePediaApp-ReviewList {
   padding: 30px 30px 0;
   border-radius: 5px;
   box-shadow: 0 0 11px rgba(105, 105, 105, 0.2);
   background-color: #fff;
 }
-.App-load-more-button {
+
+.moviePediaApp-load-more-button {
   width: 100%;
   padding: 25px 0;
   font-size: 16px;
@@ -96,10 +110,12 @@
   cursor: pointer;
   font-weight: 700;
 }
-.App-footer {
+
+.moviePediaApp-footer {
   background-color: #000;
 }
-.App-footer-container {
+
+.moviePediaApp-footer-container {
   padding: 30px 21px;
   font-size: 14px;
   letter-spacing: -0.25px;

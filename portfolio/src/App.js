@@ -31,7 +31,7 @@ function App() {
           />
           <Route path="mbticolor" element={<MbtiColor />} />
           <Route path="new" element={<New />} />
-          <Route path="dwOnline" element={<Main />} />
+          <Route path="dwOnline/*" element={<Main />} />
 
           <Route
             path="foodList"

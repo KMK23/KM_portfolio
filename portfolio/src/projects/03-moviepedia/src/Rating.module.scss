@@ -1,0 +1,8 @@
+.moviePediaRatingStar {
+  color: slategray;
+  cursor: pointer;
+}
+
+.moviePediaRatingStar.selected {
+  color: yellowgreen;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import placeholderImg from "./assets/preview-placeholder.png";
-import "./FileInput.css";
+import styles from "./FileInput.module.scss";
 import resetImg from "./assets/ic-reset.png";
 
 function FileInput({ setFile, inputName, value, initialPreview }) {
@@ -53,21 +53,26 @@ function FileInput({ setFile, inputName, value, initialPreview }) {
   //3.컴포넌트가 unmount 될 때
 
   return (
-    <div className="FileInput">
+    <div className={styles.moviePediaFileInput}>
       <img
         src={preview || placeholderImg}
         alt="사진"
-        className={`FileInput-preview ${preview ? "selected" : ""}`}
+        className={`${styles.moviePediaFileInputPreview} ${
+          preview ? styles.selected : ""
+        }`}
       />
       <input
         type="file"
         accept="image/*"
-        className="FileInput-hidden-overlay"
+        className={styles.moviePediaFileInputHiddenOverlay}
         onChange={handleFileChange}
         ref={inputRef}
       />
       {value && (
-        <button className="FileInput-clear-button" onClick={handleClearClick}>
+        <button
+          className={styles.moviePediaFileInputClearButton}
+          onClick={handleClearClick}
+        >
           <img src={resetImg} alt="" />
         </button>
       )}

@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.scss";
 import "./HandIcon.css";
 
 import reset from "./assets/ic-reset.svg";
@@ -94,39 +94,41 @@ function App() {
     setIsWin(0);
   };
   return (
-    <div className="App">
-      <div className="App-title">
-        <h1 className="App-heading">가위바위보</h1>
-        <img src={reset} className="App-reset" onClick={handleClearClick} />
+    <div className={styles.rspGameApp}>
+      <div className={styles.rspGameAppHeading}>
+        <h1>가위바위보</h1>
+        <img
+          src={reset}
+          className={styles.rspGameAppReset}
+          onClick={handleClearClick}
+        />
       </div>
       <div className="App-scores">
-        <div className="Score">
-          <div className="Score-num">{myScore}</div>
-          <div className="Score-name">나</div>
+        <div className={styles.rspGameScore}>
+          <div className={styles.rspGameScoreNum}>{myScore}</div>
+          <div className={styles.rspGameScoreName}>나</div>
         </div>
-        <div className="App-versus">:</div>
-        <div className="Score">
-          <div className="Score-num">{yourScore}</div>
-          <div className="Score-name">너</div>
+        <div className={styles.rspGameScores}>:</div>
+        <div className={styles.rspGameScore}>
+          <div className={styles.rspGameScoreNum}>{yourScore}</div>
+          <div className={styles.rspGameScoreName}>너</div>
         </div>
       </div>
       <div className="Box App-box">
-        {/* 가위바위보 내는곳 */}
-        <div className="App-hands">
+        <div className={styles.rspGameHands}>
           <div
-            className={`Hand ${isWin == 0 ? "" : isWin == 1 ? "winner" : ""}`}
+            className={`Hand ${isWin === 0 ? "" : isWin === 1 ? "winner" : ""}`}
           >
             <HandIcon className="Hand-icon" value={myChoice} />
           </div>
-          <div className="App-versus">VS</div>
+          <div className={styles.rspGameVersus}>VS</div>
           <div
-            className={`Hand ${isWin == 0 ? "" : isWin == 1 ? "" : "winner"}`}
+            className={`Hand ${isWin === 0 ? "" : isWin === 1 ? "" : "winner"}`}
           >
             <HandIcon className="Hand-icon" value={yourChoice} />
           </div>
         </div>
-        {/* 배점 */}
-        <div className="App-bet">
+        <div className={styles.rspGameBet}>
           <span>배점</span>
           <input
             type="number"
@@ -137,8 +139,7 @@ function App() {
           />
           <span>배</span>
         </div>
-        {/* 기록 */}
-        <div className="App-history">
+        <div className={styles.rspGameHistory}>
           <h2>승부기록</h2>
           <p>{gameHistory.join(", ")}</p>
         </div>

@@ -1,4 +1,4 @@
-.colorInput {
+.mbtiColorInput {
   color: #8892a6;
   font-size: 24px;
   width: 100%;
@@ -6,17 +6,21 @@
   border-radius: 16px;
   padding: 26px;
 }
-.colorInput:hover {
+
+.mbtiColorInput:hover {
   background-color: #f4f7fb;
 }
-.colorInput:focus {
+
+.mbtiColorInput:focus {
   border: 2px solid #464e5e;
   box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
-.colorInputContainer {
+
+.mbtiColorInputContainer {
   position: relative;
 }
-.colorInputChip {
+
+.mbtiColorInputChip {
   width: 40px;
   height: 40px;
   position: absolute;

@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.scss";
 import logo from "./assets/logo.png";
 import { useState } from "react";
 import Board from "./Board";
@@ -51,25 +51,30 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={styles.dicegameApp}>
       <div>
-        <img src={logo} className="App-logo" />
-        <h1 className="App-title">주사위 게임</h1>
+        <img src={logo} className={styles.dicegameAppLogo} alt="logo" />
+        <h1 className={styles.dicegameAppTitle}>주사위 게임</h1>
         <div>
-          <button className="App-btn blue" onClick={handleRollClick}>
+          <button
+            className={`${styles.dicegameAppBtn} ${styles.dicegameBlue}`}
+            onClick={handleRollClick}
+          >
             주사위 던지기
           </button>
-          <button className="App-btn red" onClick={handleClearClick}>
+          <button
+            className={`${styles.dicegameAppBtn} ${styles.dicegameRed}`}
+            onClick={handleClearClick}
+          >
             처음부터
           </button>
         </div>
       </div>
-      <div className="App-boards">
+      <div className={styles.dicegameAppBoards}>
         <Board name="나" color="blue" gameHistory={gameHistory} />
         <Board name="상대" color="red" gameHistory={otherGameHistory} />
       </div>
     </div>
   );
 }
-
 export default App;

@@ -1,17 +1,17 @@
-import React from 'react';
-import Card from './Card';
-import Writer from './Writer';
-import styles from "./Answer.module.css";
+import React from "react";
+import Card from "./Card";
+import Writer from "./Writer";
+import styles from "./Answer.module.scss";
 import cn from "classnames";
-import DateText from './DateText';
+import DateText from "./DateText";
 
 function Answer({ className, answer }) {
   const { content, createdAt, writer } = answer;
   return (
-    <Card className={cn(styles.answer, className)}>
+    <Card className={cn(styles.dwOnlineAnswer, className)}>
       <p>{content}</p>
-      <div className={styles.answerInfo}>
-        <div className={styles.date}>
+      <div className={styles.dwOnlineAnswerInfo}>
+        <div className={styles.dwOnlineDate}>
           <DateText value={createdAt} />
         </div>
         <Writer writer={writer} />

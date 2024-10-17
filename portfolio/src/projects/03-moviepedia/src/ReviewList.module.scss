@@ -1,0 +1,78 @@
+.moviePediaReviewListItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .moviePediaReviewListItemImg {
+    width: 182px;
+    height: 262px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .moviePediaReviewListItemRows {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 22px 0 18px;
+    gap: 10px;
+  }
+
+  .moviePediaReviewListItemRows .moviePediaReviewListItemTitle {
+    margin: 0 0 4px;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .moviePediaReviewListItemRows .moviePediaReviewListItemRating {
+    margin-bottom: 8px;
+  }
+
+  .moviePediaReviewListItemRows .moviePediaReviewListItemDate {
+    margin: 0 0 5px;
+    color: #dbdbdb;
+    font-size: 14px;
+    letter-spacing: -0.25px;
+  }
+
+  .moviePediaReviewListItemRows .moviePediaReviewListItemContent {
+    flex: 1 1;
+    margin: 0 0 5px;
+    overflow: hidden;
+    color: #545457;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+  }
+
+  .moviePediaReviewListItemRows .moviePediaReviewListItemButtons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .moviePediaReviewListItemEditButton,
+  .moviePediaReviewListItemDeleteButton {
+    padding: 0;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: -0.28;
+    background: transparent;
+    cursor: pointer;
+  }
+  .moviePediaReviewListItemDeleteButton {
+    color: #ff0023;
+  }
+}
+
+.moviePediaReviewList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  .moviePediaReviewList > li {
+    padding: 30px 0;
+    border-bottom: 1px dashed #c5c5c5;
+  }
+
+  .moviePediaReviewList > li:first-child {
+    padding-top: 0;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./MBTISelect.module.css";
+import styles from "./MBTISelect.module.scss";
 
 const mbtiArr = [
   { mbti: "E", desc: "외향형", groupNum: 0 },
@@ -32,7 +32,7 @@ function MBTISelect({ MBTIValue, handleChange }) {
     if (MBTIValue[selectedGruopNum] !== selectedmbti) {
       console.log(selectedGruopNum);
       console.log(selectedmbti);
-      const beforeValue = MBTIValue.slice(0, selectedGruopNum); 
+      const beforeValue = MBTIValue.slice(0, selectedGruopNum);
       const afterValue = MBTIValue.slice(selectedGruopNum + 1);
       const nextValue = beforeValue + selectedmbti + afterValue;
       handleChange(nextValue);

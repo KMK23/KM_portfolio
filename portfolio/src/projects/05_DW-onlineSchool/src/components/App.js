@@ -1,8 +1,9 @@
 import Nav from "./Nav";
-import styles from "./App.module.css";
+import styles from "./App.module.scss";
 import "./App.font.css";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
+import "./GlobalStyles.scss";
 
 function App() {
   return (

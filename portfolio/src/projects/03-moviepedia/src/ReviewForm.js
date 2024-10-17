@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import FileInput from "./FileInput";
 import RatingInput from "./RatingInput";
-import "./ReviewForm.css";
+import styles from "./ReviewForm.module.scss";
 import { LocaleContext } from "./contexts/LocaleContext";
 import useTranslate from "./hooks/useTranslate";
 
@@ -45,7 +45,7 @@ function ReviewForm({
   };
 
   return (
-    <form className="ReviewForm" onSubmit={handleSubmit}>
+    <form className={styles.moviePediaReviewForm} onSubmit={handleSubmit}>
       <div>
         <FileInput
           inputName="imgUrl"
@@ -54,7 +54,7 @@ function ReviewForm({
           initialPreview={initialPreview}
         />
       </div>
-      <div className="Form-container">
+      <div className={styles.formContainer}>
         <input
           type="text"
           placeholder={t("title placeholder")}
@@ -78,9 +78,6 @@ function ReviewForm({
             {t("cancel button")}
           </button>
         )}
-        {/* 조건부 렌더링을 위해 handleCancel 이 있고, 없고 따지려고, 그 상태에서 && 를써서 확인하는거지
-        논리연산을 하는것들에서는 true, false가 다 나와 x==1 이런것만 true false가 나오는게 아니고 
-        */}
         <button type="submit" disabled={isSubmitting}>
           {t("confirm button")}
         </button>

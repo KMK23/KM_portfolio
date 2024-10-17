@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import styles from "./App.module.scss";
 import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList";
 import logoImg from "./assets/logo.png";
@@ -110,21 +110,23 @@ function App() {
 
   // console.log(handleBestClick);
   return (
-    <div className="App">
-      <nav className="App-nav">
-        <div className="App-nav-container">
-          <img className="App-logo" src={logoImg} alt="사진" />
+    <div className={styles.moviePediaApp}>
+      {" "}
+      {/* 여기 수정 */}
+      <nav className={styles.moviePediaAppNav}>
+        <div className={styles.moviePediaAppNavContainer}>
+          <img className={styles.moviePediaAppLogo} src={logoImg} alt="사진" />
           <LocaleSelect />
         </div>
       </nav>
-      <div className="App-container">
-        <div className="App-ReviewForm">
+      <div className={styles.moviePediaAppContainer}>
+        <div className={styles.moviePediaAppReviewForm}>
           <ReviewForm
             onSubmit={addDatas}
             handleSubmitSuccess={handleAddSuccess}
           />
         </div>
-        <div className="App-sorts">
+        <div className={styles.moviePediaAppSorts}>
           <AppSortButton
             selected={order === "createdAt"}
             onClick={handleNewestClick}
@@ -138,20 +140,15 @@ function App() {
             {t("best")}
           </AppSortButton>
         </div>
-        <div className="App-ReviewList">
+        <div className={styles.moviePediaAppReviewList}>
           <ReviewList
             items={items}
             handleDelete={handleDelete}
             onUpdate={updateDatas}
             onUpdateSuccess={handleUpdateSuccess}
           />
-          {/* {hasNext && (
-            <button className="App-load-more-button" onClick={handleMoreClick}>
-              더 눌러봐유
-            </button>
-          )} */}
           <button
-            className="App-load-more-button"
+            className={styles.moviePediaAppLoadMoreButton}
             onClick={handleMoreClick}
             disabled={!hasNext}
           >
@@ -159,11 +156,12 @@ function App() {
           </button>
         </div>
       </div>
-      <footer className="App-footer">
-        <div className="App-footer-container">|{t("privary policy")}</div>
+      <footer className={styles.moviePediaAppFooter}>
+        <div className={styles.moviePediaAppFooterContainer}>
+          |{t("privary policy")}
+        </div>
       </footer>
     </div>
   );
 }
-
 export default App;

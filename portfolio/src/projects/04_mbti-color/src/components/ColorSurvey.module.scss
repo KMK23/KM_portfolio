@@ -1,0 +1,86 @@
+.mbtiColorSurvey {
+  display: flex;
+  align-items: center;
+  padding: 16px 48px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #bfc8da;
+}
+
+.mbtiColorSurvey:hover {
+  background-color: #f4f7fb;
+}
+
+.mbtiColorId {
+  flex-shrink: 0;
+  width: 58px;
+  margin-right: 40px;
+}
+
+.mbtiColorMbti {
+  flex-shrink: 0;
+  width: 76px;
+  margin-right: 25px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f0f2f5;
+  color: #464e5e;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mbtiColorArrow {
+  flex-grow: 1;
+  width: 100%;
+  height: 0px;
+  border-bottom: 2px dashed #bfc8da;
+  position: relative;
+}
+
+.mbtiColorArrowIcon {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 8px;
+  height: 13px;
+}
+
+.mbtiColorChip {
+  flex-shrink: 0;
+  margin: 0 16px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+.mbtiColorCode {
+  flex-shrink: 0;
+  width: 105px;
+}
+
+/* ... */
+@media screen and (max-width: 944px) {
+  .mbtiColorSurvey {
+    padding: 18px 16px;
+  }
+
+  .mbtiColorId {
+    width: 37px;
+    margin-right: 16px;
+  }
+
+  .mbtiColorMbti {
+    width: 54px;
+    margin-right: 16px;
+  }
+
+  .mbtiColorChip {
+    margin-right: 8px;
+    margin-left: 16px;
+  }
+
+  .mbtiColorCode {
+    width: 72px;
+  }
+}

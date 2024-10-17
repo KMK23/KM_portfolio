@@ -1,4 +1,4 @@
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 import ColorSurvey from "../components/ColorSurvey";
 import { useState, useEffect, useRef } from "react";
@@ -80,9 +80,9 @@ function Home(props) {
 
   //   console.log(styles);
   return (
-    <div className={styles.container}>
+    <div className={styles.mbtiColorContainer}>
       <div className={styles.headerContainer}>
-        <header className={styles.header}>
+        <header className={styles.mbtiColorHeader}>
           <h1 className={styles.heading}>
             MBTI별
             <br />
@@ -95,11 +95,11 @@ function Home(props) {
           </div>
         </header>
       </div>
-      <main className={styles.content}>
-        <Link className={styles.addItem} to="/New">
+      <main className={styles.mbtiColorContent}>
+        <Link className={styles.mbtiColorAddItem} to="/New">
           +새 컬러 등록하기
         </Link>
-        <ul className={styles.items}>
+        <ul className={styles.mbtiColorItems}>
           {mbti.map((mk, idx) => {
             return <ColorSurvey mk={mk} key={idx} />;
           })}

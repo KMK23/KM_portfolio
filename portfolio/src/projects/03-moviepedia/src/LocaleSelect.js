@@ -1,5 +1,5 @@
 // import React, { useContext } from "react";
-import "./LocaleSelect.css";
+import styles from "./LocaleSelect.module.scss";
 import { useLocale, useSetLocale } from "./contexts/LocaleContext";
 
 function LocaleSelect({ props }) {
@@ -12,7 +12,11 @@ function LocaleSelect({ props }) {
   };
 
   return (
-    <select className="LocaleSelect" onChange={handleChange} value={locale}>
+    <select
+      className={styles.LocaleSelect}
+      onChange={handleChange}
+      value={locale}
+    >
       <option value="ko">한국어</option>
       <option value="en">English</option>
     </select>
