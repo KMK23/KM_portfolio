@@ -17,12 +17,29 @@ function Layout(props) {
               <Link to="/diceGame">Dice Game</Link>
             </li>
             <li>
-              <Link to="/project1">Project 1</Link>
+              <Link to="/rspGame">Rock-Paper-Scissors Game</Link>
             </li>
             <li>
-              <Link to="/project2">Project 2</Link>
+              <Link to="/moviepedia">Movie Pedia</Link>
             </li>
-            {/* 나머지 프로젝트도 여기에 추가 */}
+            <li>
+              <Link to="/mbticolor">MBTI Color</Link>
+            </li>
+            <li>
+              <Link to="/dwOnline">DW Online School</Link>
+            </li>
+            <li>
+              <Link to="/foodList">Food List</Link>
+            </li>
+            <li>
+              <Link to="/realtimeChatting">Real Time Chatting</Link>
+            </li>
+            <li>
+              <Link to="/diary">Diary App</Link>
+            </li>
+            <li>
+              <Link to="/shopApp">Shop App</Link>
+            </li>
           </ul>
         </nav>
       </header>
